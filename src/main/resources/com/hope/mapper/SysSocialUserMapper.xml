@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hope.mapper.SysSocialUserMapper">
+    <update id="updateAccessToken">
+        UPDATE sys_social_user SET access_token = #{accessToken}
+        WHERE source = #{source} AND uuid = #{uuid}
+    </update>
+
+
+    <select id="findBySourceAndUuid" resultType="com.hope.domain.pojo.SysSocialUser">
+        SELECT id, user_id, source, uuid, access_token, create_time
+        FROM sys_social_user
+        WHERE source = #{source}
+          AND uuid = #{uuid}
+    </select>
+    <select id="findByUserIdAndSource" resultType="com.hope.domain.pojo.SysSocialUser">
+        SELECT id, user_id, source, uuid, access_token, create_time
+        FROM sys_social_user
+        WHERE user_id = #{userId}
+          AND source = #{source}
+    </select>
+</mapper>

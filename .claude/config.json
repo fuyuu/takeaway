@@ -1,0 +1,20 @@
+{
+  "cline.apiProvider": "openai",
+  "cline.openAiApiKey": "sk-HsgJP4ToymZ2mLSaL3FePpt8S8uUqe05gKGAnkOuktESkqGY",
+  "cline.openAiBaseUrl": "https://api.moonshot.cn/v1",
+  "cline.model": "kimi-k2-thinking-turbo",
+  "cline.maxTokens": 4000,
+  "cline.temperature": 0.7,
+  "cline.autoApprove": false,
+  "cline.gitIntegration": true,
+  "cline.excludedFiles": [
+    "node_modules/**",
+    ".git/**",
+    "*.log",
+    "dist/**"
+  ],
+  "cline.languagePreferences": {
+    "documentation": "zh-CN",
+    "code_comments": "zh-CN"
+  }
+}

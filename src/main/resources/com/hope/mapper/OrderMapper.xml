@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hope.mapper.OrderMapper">
+    <!-- 插入主订单，返回自增ID -->
+    <insert id="createOrder" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO order_list (user_id, address_id, merchant_id, order_number, total_price,
+        delivery_fee, discount_price, status)
+        VALUES
+        (#{userId}, #{addressId}, #{merchantId}, #{orderNumber}, #{totalPrice},
+        #{deliveryFee}, #{discountPrice},  #{status})
+    </insert>
+    <select id="selectByOrderNumber" resultType="com.hope.domain.dto.OrderListDTO">
+        select * from order_list where order_number=#{orderNumber}
+    </select>
+</mapper>

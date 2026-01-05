@@ -1,0 +1,315 @@
+2026-01-05 15:42:48.672 - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 15:42:48.711 - Starting TakeawayApplication using Java 17.0.12 with PID 29376 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 15:42:48.712 - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 15:42:49.496 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 15:42:49.499 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 15:42:49.527 - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2026-01-05 15:42:50.256 - Tomcat initialized with port 8080 (http)
+2026-01-05 15:42:50.279 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 15:42:50.280 - Starting service [Tomcat]
+2026-01-05 15:42:50.280 - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 15:42:50.341 - Initializing Spring embedded WebApplicationContext
+2026-01-05 15:42:50.341 - Root WebApplicationContext: initialization completed in 1595 ms
+2026-01-05 15:42:51.244 - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 15:42:51.779 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@23a9ba52
+2026-01-05 15:42:52.093 - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 15:42:52.095 - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 15:42:52.126 - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 15:42:52.133 - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 15:42:52.141 - Started TakeawayApplication in 3.777 seconds (process running for 9.18)
+2026-01-05 15:47:29.131 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 15:47:29.209 - Graceful shutdown complete
+2026-01-05 15:47:30.787 - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 15:47:30.814 - Starting TakeawayApplication using Java 17.0.12 with PID 4244 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 15:47:30.815 - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 15:47:31.369 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 15:47:31.370 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 15:47:31.387 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-01-05 15:47:31.824 - Tomcat initialized with port 8080 (http)
+2026-01-05 15:47:31.831 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 15:47:31.832 - Starting service [Tomcat]
+2026-01-05 15:47:31.832 - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 15:47:31.870 - Initializing Spring embedded WebApplicationContext
+2026-01-05 15:47:31.870 - Root WebApplicationContext: initialization completed in 1031 ms
+2026-01-05 15:47:32.575 - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 15:47:32.997 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@51684e4a
+2026-01-05 15:47:33.261 - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 15:47:33.262 - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 15:47:33.293 - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 15:47:33.300 - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 15:47:33.307 - Started TakeawayApplication in 2.736 seconds (process running for 3.171)
+2026-01-05 15:50:52.642 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 15:50:52.718 - Graceful shutdown complete
+2026-01-05 15:50:54.338 - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 15:50:54.369 - Starting TakeawayApplication using Java 17.0.12 with PID 3840 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 15:50:54.370 - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 15:50:54.938 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 15:50:54.940 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 15:50:54.960 - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2026-01-05 15:50:55.411 - Tomcat initialized with port 8080 (http)
+2026-01-05 15:50:55.418 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 15:50:55.419 - Starting service [Tomcat]
+2026-01-05 15:50:55.419 - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 15:50:55.458 - Initializing Spring embedded WebApplicationContext
+2026-01-05 15:50:55.458 - Root WebApplicationContext: initialization completed in 1059 ms
+2026-01-05 15:50:56.182 - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 15:50:56.620 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1e886a5b
+2026-01-05 15:50:56.891 - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 15:50:56.892 - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 15:50:56.924 - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 15:50:56.932 - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 15:50:56.939 - Started TakeawayApplication in 2.829 seconds (process running for 3.267)
+2026-01-05 16:11:10.890 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:11:10.971 - Graceful shutdown complete
+2026-01-05 16:11:12.588 - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:11:12.615 - Starting TakeawayApplication using Java 17.0.12 with PID 18844 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:11:12.616 - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:11:13.169 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:11:13.171 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:11:13.189 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:11:13.645 - Tomcat initialized with port 8080 (http)
+2026-01-05 16:11:13.654 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:11:13.655 - Starting service [Tomcat]
+2026-01-05 16:11:13.655 - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:11:13.692 - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:11:13.692 - Root WebApplicationContext: initialization completed in 1053 ms
+2026-01-05 16:11:14.411 - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:11:14.895 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1e886a5b
+2026-01-05 16:11:15.187 - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:11:15.189 - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:11:15.219 - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:11:15.226 - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:11:15.234 - Started TakeawayApplication in 2.877 seconds (process running for 3.353)
+2026-01-05 16:27:12.482 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:27:12.562 - Graceful shutdown complete
+2026-01-05 16:27:14.180 - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:27:14.208 - Starting TakeawayApplication using Java 17.0.12 with PID 21952 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:27:14.209 - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:27:14.750 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:27:14.751 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:27:14.769 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:27:15.212 - Tomcat initialized with port 8080 (http)
+2026-01-05 16:27:15.219 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:27:15.220 - Starting service [Tomcat]
+2026-01-05 16:27:15.220 - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:27:15.258 - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:27:15.258 - Root WebApplicationContext: initialization completed in 1023 ms
+2026-01-05 16:27:15.963 - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:27:16.375 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@51684e4a
+2026-01-05 16:27:16.634 - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:27:16.635 - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:27:16.665 - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:27:16.671 - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:27:16.678 - Started TakeawayApplication in 2.726 seconds (process running for 3.191)
+2026-01-05 16:27:35.465 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:27:35.542 - Graceful shutdown complete
+2026-01-05 16:27:37.176 - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:27:37.201 - Starting TakeawayApplication using Java 17.0.12 with PID 20360 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:27:37.201 - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:27:37.734 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:27:37.736 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:27:37.755 - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:27:38.192 - Tomcat initialized with port 8080 (http)
+2026-01-05 16:27:38.200 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:27:38.201 - Starting service [Tomcat]
+2026-01-05 16:27:38.201 - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:27:38.238 - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:27:38.238 - Root WebApplicationContext: initialization completed in 1012 ms
+2026-01-05 16:27:38.930 - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:27:39.352 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@51684e4a
+2026-01-05 16:27:39.609 - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:27:39.610 - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:27:39.642 - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:27:39.649 - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:27:39.656 - Started TakeawayApplication in 2.708 seconds (process running for 3.199)
+2026-01-05 16:28:31.571 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:28:31.649 - Graceful shutdown complete
+2026-01-05 16:28:33.248 - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:28:33.276 - Starting TakeawayApplication using Java 17.0.12 with PID 23776 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:28:33.276 - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:28:33.802 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:28:33.804 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:28:33.821 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:28:34.264 - Tomcat initialized with port 8080 (http)
+2026-01-05 16:28:34.272 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:28:34.273 - Starting service [Tomcat]
+2026-01-05 16:28:34.273 - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:28:34.310 - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:28:34.310 - Root WebApplicationContext: initialization completed in 1008 ms
+2026-01-05 16:28:35.001 - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:28:35.419 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d816dde
+2026-01-05 16:28:35.678 - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:28:35.680 - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:28:35.710 - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:28:35.717 - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:28:35.723 - Started TakeawayApplication in 2.701 seconds (process running for 3.155)
+2026-01-05 16:29:10.458 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:29:10.534 - Graceful shutdown complete
+2026-01-05 16:29:12.154 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:29:12.184 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - Starting TakeawayApplication using Java 17.0.12 with PID 23668 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:29:12.184 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:29:12.761 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:29:12.762 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:29:12.780 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:29:13.234 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2026-01-05 16:29:13.241 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:29:13.243 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2026-01-05 16:29:13.243 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:29:13.281 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:29:13.281 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1070 ms
+2026-01-05 16:29:13.984 [main] [39mDEBUG[0;39m [36mo.s.a.m.t.a.ToolCallingAutoConfiguration[0;39m - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:29:14.406 [main] [34mINFO [0;39m [36mc.b.m.e.s.MybatisPlusApplicationContextAware[0;39m - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d816dde
+2026-01-05 16:29:14.663 [main] [31mWARN [0;39m [36mc.b.m.core.injector.methods.Insert[0;39m - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:29:14.664 [main] [31mWARN [0;39m [36mc.b.m.core.injector.methods.Update[0;39m - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:29:14.694 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:29:14.701 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:29:14.708 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - Started TakeawayApplication in 2.803 seconds (process running for 3.265)
+2026-01-05 16:29:21.280 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:29:21.358 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2026-01-05 16:29:22.700 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:29:22.726 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - Starting TakeawayApplication using Java 17.0.12 with PID 23180 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:29:22.726 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:29:23.287 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:29:23.289 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:29:23.306 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:29:23.767 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2026-01-05 16:29:23.774 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:29:23.775 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2026-01-05 16:29:23.775 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:29:23.811 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:29:23.811 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1062 ms
+2026-01-05 16:29:24.509 [main] [39mDEBUG[0;39m [36mo.s.a.m.t.a.ToolCallingAutoConfiguration[0;39m - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:29:24.939 [main] [34mINFO [0;39m [36mc.b.m.e.s.MybatisPlusApplicationContextAware[0;39m - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d816dde
+2026-01-05 16:29:25.194 [main] [31mWARN [0;39m [36mc.b.m.core.injector.methods.Insert[0;39m - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:29:25.196 [main] [31mWARN [0;39m [36mc.b.m.core.injector.methods.Update[0;39m - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:29:25.222 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:29:25.228 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:29:25.234 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - Started TakeawayApplication in 2.75 seconds (process running for 3.192)
+2026-01-05 16:29:39.030 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:29:39.106 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2026-01-05 16:29:40.678 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:29:40.709 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - Starting TakeawayApplication using Java 17.0.12 with PID 2944 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:29:40.710 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:29:41.242 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:29:41.244 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:29:41.261 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:29:41.700 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2026-01-05 16:29:41.706 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:29:41.708 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2026-01-05 16:29:41.709 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:29:41.745 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:29:41.745 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1011 ms
+2026-01-05 16:29:42.445 [main] [39mDEBUG[0;39m [36mo.s.a.m.t.a.ToolCallingAutoConfiguration[0;39m - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:29:42.855 [main] [34mINFO [0;39m [36mc.b.m.e.s.MybatisPlusApplicationContextAware[0;39m - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d816dde
+2026-01-05 16:29:43.114 [main] [31mWARN [0;39m [36mc.b.m.core.injector.methods.Insert[0;39m - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:29:43.116 [main] [31mWARN [0;39m [36mc.b.m.core.injector.methods.Update[0;39m - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:29:43.146 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:29:43.152 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:29:43.159 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - Started TakeawayApplication in 2.704 seconds (process running for 3.148)
+2026-01-05 16:29:55.916 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:29:55.998 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2026-01-05 16:29:57.490 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:29:57.518 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - Starting TakeawayApplication using Java 17.0.12 with PID 21912 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:29:57.518 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:29:58.058 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:29:58.060 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:29:58.077 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:29:58.535 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2026-01-05 16:29:58.543 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:29:58.544 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2026-01-05 16:29:58.544 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:29:58.582 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:29:58.582 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1038 ms
+2026-01-05 16:29:59.323 [main] [39mDEBUG[0;39m [36mo.s.a.m.t.a.ToolCallingAutoConfiguration[0;39m - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:29:59.737 [main] [34mINFO [0;39m [36mc.b.m.e.s.MybatisPlusApplicationContextAware[0;39m - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d816dde
+2026-01-05 16:29:59.998 [main] [31mWARN [0;39m [36mc.b.m.core.injector.methods.Insert[0;39m - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:29:59.999 [main] [31mWARN [0;39m [36mc.b.m.core.injector.methods.Update[0;39m - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:30:00.030 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:30:00.037 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:30:00.044 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - Started TakeawayApplication in 2.785 seconds (process running for 3.212)
+2026-01-05 16:30:04.940 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:30:05.018 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2026-01-05 16:30:06.971 [background-preinit] [34mINFO [0;39m [36mo.h.validator.internal.util.Version[0;39m - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:30:06.999 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - Starting TakeawayApplication using Java 17.0.12 with PID 12092 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:30:07.000 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:30:07.550 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:30:07.552 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:30:07.571 [main] [34mINFO [0;39m [36mo.s.d.r.c.RepositoryConfigurationDelegate[0;39m - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:30:08.045 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 8080 (http)
+2026-01-05 16:30:08.053 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:30:08.054 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2026-01-05 16:30:08.054 [main] [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:30:08.091 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:30:08.091 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 1063 ms
+2026-01-05 16:30:08.781 [main] [39mDEBUG[0;39m [36mo.s.a.m.t.a.ToolCallingAutoConfiguration[0;39m - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:30:09.202 [main] [34mINFO [0;39m [36mc.b.m.e.s.MybatisPlusApplicationContextAware[0;39m - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@d816dde
+2026-01-05 16:30:09.461 [main] [31mWARN [0;39m [36mc.b.m.core.injector.methods.Insert[0;39m - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:30:09.463 [main] [31mWARN [0;39m [36mc.b.m.core.injector.methods.Update[0;39m - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:30:09.492 [main] [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:30:09.498 [main] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:30:09.505 [main] [34mINFO [0;39m [36mcom.hope.TakeawayApplication[0;39m - Started TakeawayApplication in 2.746 seconds (process running for 3.181)
+2026-01-05 16:35:49.390 [SpringApplicationShutdownHook] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:35:49.469 [tomcat-shutdown] [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2026-01-05 16:35:52.161 - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:35:52.189 - Starting TakeawayApplication using Java 17.0.12 with PID 1496 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:35:52.190 - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:35:52.724 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:35:52.725 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:35:52.743 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:35:53.182 - Tomcat initialized with port 8080 (http)
+2026-01-05 16:35:53.190 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:35:53.191 - Starting service [Tomcat]
+2026-01-05 16:35:53.191 - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:35:53.227 - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:35:53.227 - Root WebApplicationContext: initialization completed in 1012 ms
+2026-01-05 16:35:53.902 - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:35:54.322 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@41382722
+2026-01-05 16:35:54.581 - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:35:54.583 - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:35:54.612 - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:35:54.619 - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:35:54.627 - Started TakeawayApplication in 2.683 seconds (process running for 3.095)
+2026-01-05 16:36:06.394 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:36:06.469 - Graceful shutdown complete
+2026-01-05 16:36:12.422 - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:36:12.448 - Starting TakeawayApplication using Java 17.0.12 with PID 24024 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:36:12.449 - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:36:12.984 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:36:12.985 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:36:13.003 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:36:13.439 - Tomcat initialized with port 8080 (http)
+2026-01-05 16:36:13.447 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:36:13.447 - Starting service [Tomcat]
+2026-01-05 16:36:13.447 - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:36:13.482 - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:36:13.482 - Root WebApplicationContext: initialization completed in 1009 ms
+2026-01-05 16:36:14.163 - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:36:14.565 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@425357dd
+2026-01-05 16:36:14.811 - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:36:14.812 - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:36:14.843 - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:36:14.849 - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:36:14.856 - Started TakeawayApplication in 2.64 seconds (process running for 3.054)
+2026-01-05 16:36:19.116 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:36:19.194 - Graceful shutdown complete
+2026-01-05 16:36:20.843 - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-05 16:36:20.871 - Starting TakeawayApplication using Java 17.0.12 with PID 7832 (D:\develop\code\springboot\takeaway\target\classes started by 3402351070 in D:\develop\code\springboot\takeaway)
+2026-01-05 16:36:20.871 - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 16:36:21.424 - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-05 16:36:21.425 - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-05 16:36:21.443 - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+2026-01-05 16:36:21.887 - Tomcat initialized with port 8080 (http)
+2026-01-05 16:36:21.894 - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:36:21.895 - Starting service [Tomcat]
+2026-01-05 16:36:21.895 - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-01-05 16:36:21.932 - Initializing Spring embedded WebApplicationContext
+2026-01-05 16:36:21.933 - Root WebApplicationContext: initialization completed in 1036 ms
+2026-01-05 16:36:22.659 - Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+2026-01-05 16:36:23.083 - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6c451c9c
+2026-01-05 16:36:23.333 - [com.hope.mapper.SysSocialUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2026-01-05 16:36:23.335 - [com.hope.mapper.SysSocialUserMapper.update] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Update]
+2026-01-05 16:36:23.365 - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-05 16:36:23.371 - Tomcat started on port 8080 (http) with context path '/'
+2026-01-05 16:36:23.378 - Started TakeawayApplication in 2.765 seconds (process running for 3.225)
+2026-01-05 16:40:59.020 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-05 16:40:59.100 - Graceful shutdown complete

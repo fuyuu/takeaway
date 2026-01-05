@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hope.mapper.CategoryMapper">
+
+    <!-- 公共列 -->
+    <sql id="Base_Column_List">
+        id,name,type,status,create_time,update_time,create_id,update_id,merchant_id
+    </sql>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into category(name,type,sort,status)
+        values(#{name},#{nickname},#{type},#{sort},#{status},#{createId},#{updateId},#{merchantId})
+    </insert>
+
+    <!-- 主键更新（动态字段） -->
+    <update id="updateById">
+        UPDATE category
+        <set>
+            <if test="name != null">name = #{name},</if>
+            <if test="nickname != null">nickname = #{nickname},</if>
+            <if test="type != null">type = #{type},</if>
+            <if test="sort != null">sort = #{sort},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="updateId != null">update_id = #{updateId},</if>
+            update_time = NOW()
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM category WHERE id = #{id}
+    </delete>
+
+    <!-- 主键查询 -->
+    <select id="selectById" resultType="com.hope.domain.pojo.Category">
+        SELECT <include refid="Base_Column_List"/>
+        FROM category
+        WHERE id = #{id}
+    </select>
+
+    <!-- 条件列表（可按 merchant_id 过滤） -->
+    <select id="selectList" resultType="com.hope.domain.pojo.Category">
+        SELECT <include refid="Base_Column_List"/>
+        FROM category
+        <where>
+            <if test="merchantId != null">
+                AND merchant_id = #{merchantId}
+            </if>
+        </where>
+        ORDER BY sort ASC, id ASC
+    </select>
+    <resultMap id="CategoryWithTagsRM" type="com.hope.domain.dto.CategoryDTO">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="type" property="type"/>
+        <!-- 把多行 tag 聚合进 List<Tag> tags -->
+        <collection property="tags" ofType="com.hope.domain.dto.TagDTO">
+            <id column="tag_id" property="id"/>
+            <result column="tag_name" property="name"/>
+        </collection>
+    </resultMap>
+
+    <select id="listMerchantCategory"  resultMap="CategoryWithTagsRM">
+        SELECT c.id        AS id,
+               c.name      AS name,
+               c.type      AS type,
+               t.id        AS tag_id,
+               t.name      AS tag_name
+        FROM category c
+                 JOIN tag t ON c.id = t.category_id
+        WHERE c.status = 1
+          AND c.type   = 3
+        ORDER BY c.sort, c.id, t.id;
+    </select>
+    <resultMap id="CategoryWithTagsFood" type="com.hope.domain.dto.CategoryDTO">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="type" property="type"/>
+    </resultMap>
+    <select id="listFoodCategory"  resultMap="CategoryWithTagsFood">
+        SELECT c.id        AS id,
+               c.name      AS name,
+               c.type      AS type
+        FROM category c
+        WHERE c.status = 1
+          AND c.type   = 1
+    </select>
+<!--    字符串过来就是一个标签过来-->
+    <select id="selectByTag" resultType="com.hope.domain.dto.MerchantDTO">
+        select m.id,
+               m.name,
+               m.avatar,
+               m.description,
+               m.delivery_fee,
+               m.min_order_amount,
+               m.score,
+               m.address,
+               m.address_id,
+               m.email
+        from merchant m
+                 left outer join category
+                 left join merchant_category
+                     on merchant_category.category_id=category.
+    </select>
+
+
+</mapper>

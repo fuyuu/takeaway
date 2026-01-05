@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hope.mapper.UserMapper">
+    <sql id="baseColumn">
+        id, username, nickname, email, avatar, status, create_time, update_time
+    </sql>
+
+    <select id="login" resultType="com.hope.domain.pojo.User">
+        SELECT id, username, password, email
+        FROM user
+        WHERE username = #{username} AND password = #{password}
+    </select>
+    <update id="edit">
+        UPDATE user
+        <set>
+            <if test="username != null">username = #{username},</if>
+            <if test="nickname != null">nickname = #{nickname},</if>
+            <if test="avatar != null">avatar = #{avatar},</if>
+            <if test="email != null">email = #{email},</if>
+            <if test="info != null">info = #{info},</if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+</mapper>

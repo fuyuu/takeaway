@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hope.mapper.CartMapper">
+
+    <insert id="createCart"  useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO cart (quantity, user_id, spu_id, sku_id,is_deleted,status)
+<!--        VALUES (#{quantity}, #{userId}, #{spuId}, #{skuId})  这里还有以一个sku没有写上去呢-->
+        VALUES (#{quantity}, #{userId}, #{spuId}, #{skuId},0,0)
+    </insert>
+
+    <!-- 根据id删除 -->
+    <update id="deleteCart">
+        UPDATE cart
+        SET is_deleted = 1
+        WHERE id = #{id} AND is_deleted = 0
+    </update>
+
+    <update id="deleteALLCart">
+        UPDATE cart
+        SET is_deleted = 1
+        WHERE id = #{id} AND is_deleted = 0
+    </update>
+
+    <!-- 根据id查询 -->
+    <select id="getCart" resultType="com.hope.domain.pojo.Cart">
+        SELECT id, quantity, user_id, sku_id
+        FROM cart
+        WHERE id = #{id} AND is_deleted = 0 and user_id=#{userId}
+    </select>
+    <!-- 查询所有购物车 -->
+    <select id="getCartList" resultType="com.hope.domain.dto.CartDTO">
+        SELECT c.id, c.spu_id, c.sku_id, c.user_id, c.quantity, sku.price, spu.name
+        FROM cart c
+                 LEFT JOIN dish_spu spu ON spu.id = c.spu_id
+                 LEFT JOIN dish_sku sku ON sku.id = c.sku_id
+        <where>
+            c.user_id = #{userId}
+            and c.is_deleted = 0
+            <if test="merchant_id != null">
+                AND spu.merchant_id = #{merchantId}
+            </if>
+        </where>
+        ORDER BY c.create_time DESC
+    </select>
+    
+    <select id="findByUserAndSku" resultType="com.hope.domain.dto.CartDTO">
+        SELECT c.id,c.spu_id,c.sku_id,c.user_id, c.quantity,sku.price as price, sku.spu_id,spu.name
+        FROM cart c
+                 LEFT JOIN dish_spu spu ON spu.id=c.spu_id
+                 LEFT JOIN dish_sku sku ON sku.id=c.sku_id
+        WHERE c.user_id=#{userId} and c.sku_id=#{skuId}
+          AND c.is_deleted = 0
+    </select>
+    
+    <select id="findByUserAndSkuDel" resultType="com.hope.domain.dto.CartDTO">
+        SELECT c.id,c.spu_id,c.sku_id,c.user_id, c.quantity,sku.price as price, sku.spu_id,spu.name
+        FROM cart c
+                 LEFT JOIN dish_spu spu ON spu.id=c.spu_id
+                 LEFT JOIN dish_sku sku ON sku.id=c.sku_id
+        WHERE c.user_id=#{userId} and c.sku_id=#{skuId}
+          AND c.is_deleted = 1 AND c.user_id = #{userId}
+    </select>
+    <select id="getCartByMerchant" resultType="com.hope.domain.pojo.Cart">
+        SELECT c.id, c.spu_id, c.sku_id, c.user_id, c.quantity, sku.price, spu.name
+        FROM cart c
+                 LEFT JOIN dish_spu spu ON spu.id = c.spu_id
+                 LEFT JOIN dish_sku sku ON sku.id = c.sku_id
+        WHERE c.user_id = #{userId}
+          AND spu.merchant_id = #{merchantId}  AND c.is_deleted = 0
+        /*SELECT
+            c.*,
+            s.name AS spu_name,
+            s.image AS spu_image
+        FROM
+            cart c
+                INNER JOIN
+            dish_spu s ON c.spu_id = s.id
+        WHERE
+            s.merchant_id = #{merchantId}  -- 过滤商家ID
+          AND c.user_id = #{userId}      -- 过滤用户ID
+          AND c.is_deleted = 0           -- 确保不是逻辑删除的数据
+          AND c.status = 0;              -- 0表示未下单（根据你的备注）*/
+    </select>
+    <select id="getCartListByMerchant" resultType="com.hope.domain.dto.CartDTO">
+        SELECT
+            c.id,
+            c.quantity,
+            c.user_id,
+            c.spu_id,
+            c.sku_id,
+            -- 通过嵌套子查询获取菜品名和图片（如果不希望用 JOIN）
+            (SELECT name FROM dish_spu WHERE id = c.spu_id) as name,
+            (SELECT image FROM dish_spu WHERE id = c.spu_id) as image,
+            -- 价格通常在 SKU 表，也可以这样嵌套
+            (SELECT price FROM dish_sku WHERE id = c.sku_id) as price
+        FROM cart c
+        WHERE c.user_id = #{userId}
+          AND c.is_deleted = 0
+          AND c.status = 0
+          AND c.spu_id IN (
+            SELECT id FROM dish_spu WHERE merchant_id = #{merchantId}
+        )
+        ORDER BY c.create_time DESC
+    </select>
+    <!-- 更新购物车 -->
+    <update id="updateCart">
+        UPDATE cart
+        <set>
+            <if test="quantity != null">
+                quantity = #{quantity},
+            </if>
+        </set>
+        WHERE id = #{id} AND user_id = #{userId} AND is_deleted = 0
+    </update>
+    <update id="updateCartQuantity">
+        UPDATE cart
+        <set>
+            <if test="quantity != null">
+                quantity = #{quantity},
+            </if>
+        </set>
+        WHERE id = #{id} AND user_id = #{userId}
+    </update>
+    <delete id="cleanCartByUserIdMerchant">
+        DELETE c FROM cart c
+                          INNER JOIN dish_spu spu ON c.spu_id = spu.id
+        WHERE c.user_id = #{userId}
+          AND spu.merchant_id = #{merchantId}
+          AND c.is_deleted = 0
+    </delete>
+
+    <delete id="deleteCartPhysically">
+        DELETE FROM cart WHERE id = #{id}
+    </delete>
+</mapper>

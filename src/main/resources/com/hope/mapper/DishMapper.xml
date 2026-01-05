@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hope.mapper.DishMapper">
+    <!--基础字段-->
+    <sql id="spuColumns">
+        id, name, category_id, merchant_id, image, description, status,
+        create_time, update_time, create_id, update_id
+    </sql>
+    <!-- SKU字段 -->
+    <sql id="skuColumns">
+        s.id, s.spu_id, s.heft, s.sku_status, s.spec2,
+        s.price, s.stock_num
+    </sql>
+    <!--useGeneratedKeys:true 表示获取主键值    keyProperty="id" 表示将主键值赋给id属性-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into dish_spu
+        (name, category_id, merchant_id, image, description, status,
+        create_time, update_time, create_id, update_id)
+        values
+        (#{name}, #{categoryId}, #{merchant_id}, #{image}, #{description},#{status},
+        #{createTime}, #{updateTime},#{createId}, #{updateId})
+    </insert>
+    <insert id="createDishSpu"></insert>
+    <update id="updateDishSpu"></update>
+    <delete id="deleteDishSpu"></delete>
+
+    <select id="getDishSpuListSkuByMerchantId" resultType="com.hope.domain.pojo.DishSpu">
+        select * from dish_spu where merchant_id=#{merchantId} and status=0
+    </select>
+    <select id="getDishSpuList" resultType="com.hope.domain.pojo.Result">
+
+    </select>
+
+    <select id="getDishSpuListWithSku" resultType="com.hope.domain.dto.DishSpuDTO"></select>
+    <!-- 根据商家ID查询SPU及关联的SKU -->
+    <select id="getDishSpuWithSkuByMerchantId" resultMap="spuWithSkuMap">
+        SELECT
+        <include refid="spuColumns"/>,
+        <include refid="skuColumns"/>
+        FROM dish_spu spu
+        LEFT JOIN dish_sku s ON spu.id = s.spu_id
+        WHERE spu.merchant_id = #{merchantId}
+        AND spu.status = 0  -- 只查询在售SPU
+        AND s.sku_status = 0  -- 只查询在售SKU（可选）
+    </select>
+    <select id="getSkuBySpuId" resultType="com.hope.domain.pojo.DishSku">
+        SELECT <include refid="skuColumns"/>
+        FROM dish_sku s
+        WHERE s.spu_id = #{spuId}
+        AND s.sku_status = 0  -- 只查询在售SKU
+    </select>
+    <select id="getDishSpu" resultType="com.hope.domain.pojo.DishSpu">
+        select id,spu_id,sku_status,heft,spec2,price,stock_num,lock_stock,image
+        from dish_sku
+        where spu_id=#{id}
+    </select>
+    <select id="getDishSpuSPU" resultType="com.hope.domain.pojo.DishSpu">
+        select *
+        from dish_spu
+        where id=#{id}
+    </select>
+    <select id="getSkuById" resultType="com.hope.domain.pojo.DishSku">
+        SELECT
+            id,
+            spu_id,
+            heft,
+            sku_status,
+            spec2, -- 注意：你的数据库里叫 spec2
+            price,
+            stock_num
+        FROM dish_sku
+        WHERE id = #{id}
+    </select>
+    <!-- 结果映射：SPU关联SKU列表 -->
+    <resultMap id="spuWithSkuMap" type="com.hope.domain.pojo.DishSpu">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="merchant_id" property="merchantId"/>
+        <result column="category_id" property="categoryId"/>
+        <result column="image" property="image"/>
+        <result column="description" property="description"/>
+        <result column="status" property="status"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_id" property="createId"/>
+        <result column="update_id" property="updateId"/>
+        <!-- 关联SKU列表 -->
+        <collection property="skuList" ofType="com.hope.domain.pojo.DishSku">
+            <id column="sku_id" property="id"/>
+            <result column="spu_id" property="spuId"/>
+<!--            <result column="spec1" property="spec1"/>-->
+            <result column="spec2" property="spec2"/>
+            <result column="price" property="price"/>
+            <result column="stock_num" property="stockNum"/>
+            <result column="sku_status" property="skuStatus"/>
+            <!-- 其他SKU字段映射... -->
+        </collection>
+    </resultMap>
+</mapper>

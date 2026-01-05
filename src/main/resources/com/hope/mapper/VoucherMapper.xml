@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hope.mapper.VoucherMapper">
+    <!--插入-->
+    <insert id="saveVoucher" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO tb_voucher (merchant_id, title, sub_title, rules,
+        pay_value, actual_value, type, status)
+        VALUES (#{merchantId}, #{title}, #{subTitle}, #{rules}, #{payValue},
+        #{actualValue}, #{type}, #{status})
+    </insert>
+    <insert id="saveSecKillVoucher" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO tb_seckill_voucher ( voucher_id, stock, begin_time, end_time )
+        VALUES ( #{voucherId}, #{stock}, #{beginTime}, #{endTime} );
+    </insert>
+    <insert id="saveVoucherOrder" useGeneratedKeys="true" keyProperty="id">
+        insert into tb_voucher_order
+        (id, user_id, voucher_id, pay_type, status,
+        pay_time, use_time, refund_time)
+        values (#{id}, #{userId}, #{voucherId}, #{payType}, #{status},
+        #{payTime}, #{useTime}, #{refundTime})
+    </insert>
+    <!--update-->
+    <update id="decreaseSecKill">
+        update tb_seckill_voucher set stock = stock-1 where voucher_id=#{id} and stock>0
+    </update>
+
+    <update id="updateVoucher">
+        UPDATE tb_voucher
+        <set>
+            <if test="title != null">title = #{title},</if>
+            <if test="subTitle != null">sub_title = #{subTitle},</if>
+            <if test="rules != null">rules = #{rules},</if>
+            <if test="payValue != null">pay_value = #{payValue},</if>
+            <if test="actualValue != null">actual_value = #{actualValue},</if>
+            <if test="type != null">type = #{type},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </set>
+        where merchant_id=#{voucherId}
+    </update>
+    <update id="updateVoucherSeckill">
+        UPDATE tb_voucher
+        <set>
+            <if test="stock != null">stock = #{stock},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="beginTime != null">begin_time = #{beginTime},</if>
+            <if test="endTime != null">end_time = #{endTime},</if>
+        </set>
+        where merchant_id=#{voucherId}
+    </update>
+    <!--查询-->
+    <!--普通 优惠卷-->
+    <select id="getVoucherById" resultType="com.hope.domain.pojo.Voucher">
+        select * from tb_voucher where id=#{voucherId}
+    </select>
+    <!--秒杀 优惠卷-->
+    <select id="getVoucherSeckillById" resultType="com.hope.domain.pojo.Voucher">
+        select v.* , s.stock,s.begin_time,s.end_time
+        from tb_voucher v
+        left join tb_seckill_voucher s on v.id=s.voucher_id
+        where v.id=#{voucherId}
+    </select>
+    <select id="getByIdVoucherOrder" resultType="com.hope.domain.pojo.VoucherOrder">
+        select * from tb_voucher_order where id=#{voucherId}
+    </select>
+    <select id="listVouchers"  resultType="com.hope.domain.pojo.Voucher">
+        select v.* , s.stock,s.begin_time,s.end_time
+        from tb_voucher v
+        left join tb_seckill_voucher s on v.id=s.voucher_id
+        where merchant_id=#{merchantId}
+    </select>
+    <select id="queryUserIdVoucherId" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM tb_voucher_order
+        WHERE user_id = #{userId}
+        AND voucher_id = #{voucherId}
+    </select>
+</mapper>

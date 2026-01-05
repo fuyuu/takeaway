@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hope.mapper.MerchantMapper">
+    <sql id="merchantColumns">
+        id, name, avatar, description, delivery_fee, min_order_amount,
+        score, address, email, create_time, update_time, status, user_id
+    </sql>
+
+    <!-- 1. 根据商家ID查询单个商家及其关联的菜品SPU -->
+    <select id="getMerchantWithDishSpu" resultMap="merchantWithSpuMap">
+        SELECT
+        m.*,  -- 商家基本信息
+        s.id AS spu_id,  -- 菜品SPU ID（别名避免与商家ID冲突）
+        s.name AS spu_name,
+        s.category_id AS spu_category_id,
+        s.merchant_id as spu_merchant_id,
+        s.image AS spu_image,
+        s.description AS spu_description,
+        s.status AS spu_status,
+        MiN(ku.price) AS spu_min_price
+        FROM merchant m
+        LEFT JOIN dish_spu s ON m.id = s.merchant_id  -- 关联菜品SPU表
+        LEFT JOIN dish_sku ku ON ku.spu_id = s.id
+        WHERE m.id = #{merchantId}  -- 传入商家ID
+        AND m.status = 0  -- 只查询正常营业的商家
+        AND s.status = 0  -- 只查询在售的SPU（可选，根据业务需求）
+        GROUP BY
+        m.id,          -- 商家主键
+        s.id,          -- SPU 主键
+        s.name,        -- 以下所有非聚合列都要写
+        s.category_id,
+        s.merchant_id,
+        s.image,
+        s.description,
+        s.status
+<!--        ORDER BY s.create_time DESC-->
+    </select>
+
+    <!-- 2. 查询所有商家及其关联的菜品SPU -->
+    <select id="listMerchantWithDishSpu" resultMap="merchantWithSpuMap">
+        SELECT
+        m.*,  -- 商家基本信息
+        s.id AS spu_id,
+        s.name AS spu_name,
+        s.category_id AS spu_category_id,
+        s.merchant_id as spu_merchant_id,
+        s.image AS spu_image,
+        s.description AS spu_description,
+        s.status AS spu_status
+        FROM merchant m
+        LEFT JOIN dish_spu s ON m.id = s.merchant_id  -- 关联菜品SPU表
+        WHERE m.status = 0  -- 只查询正常营业的商家
+        AND s.status = 0  -- 只查询在售的SPU（可选）
+        ORDER BY m.create_time DESC  -- 按创建时间倒序
+    </select>
+    <select id="listMerchantWithCategory" resultMap="merchantWithSpuMap">
+        SELECT
+            m.*,  -- 商家基本信息
+            s.id AS spu_id,
+            s.name AS spu_name,
+            s.category_id AS spu_category_id,
+            s.merchant_id as spu_merchant_id,
+            s.image AS spu_image,
+            s.description AS spu_description,
+            s.status AS spu_status
+        FROM merchant m
+                 LEFT JOIN merchant_category mc on m.id=mc.merchant_id
+                 left join category c on c.id=mc.category_id
+                 LEFT JOIN dish_spu s ON m.id = s.merchant_id  -- 关联菜品SPU表
+        WHERE m.status = 0  -- 只查询正常营业的商家
+          and mc.category_id=#{id}
+          AND s.status = 0  -- 只查询在售的SPU（可选）
+        ORDER BY m.create_time DESC  -- 按创建时间倒序
+    </select>
+
+    <!-- 结果映射：商家信息关联菜品SPU列表 -->
+    <resultMap id="merchantWithSpuMap" type="com.hope.domain.dto.MerchantDTO">
+        <!-- 商家基本字段映射 -->
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="avatar" property="avatar"/>
+        <result column="description" property="description"/>
+        <result column="delivery_fee" property="deliveryFee"/>
+        <result column="min_order_amount" property="minOrderAmount"/>
+        <result column="score" property="score"/>
+        <result column="address" property="address"/>
+        <result column="email" property="email"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="user_id" property="userId"/>
+
+        <!-- 关联菜品SPU列表（一对多关系） -->
+        <collection property="dishSpuList" ofType="com.hope.domain.dto.DishSpuDTO">
+            <id column="spu_id" property="id"/>  <!-- 使用别名映射SPU的ID -->
+            <result column="spu_name" property="name"/>
+            <result column="spu_category_id" property="categoryId"/>
+            <result column="spu_merchant_id" property="merchantId"/>
+            <result column="spu_image" property="image"/>
+            <result column="spu_description" property="description"/>
+            <result column="spu_status" property="status"/>
+            <result column="spu_min_price" property="price"/>
+
+        </collection>
+    </resultMap>
+</mapper>
